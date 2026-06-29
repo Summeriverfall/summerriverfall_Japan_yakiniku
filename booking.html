@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book your appointment at mooi — Japanese beauty salon in Osaka">
+  <title>Book Appointment — mooi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --cream: #faf7f2;
+      --cream-dark: #f0ebe3;
+      --blush: #e8d5d0;
+      --blush-deep: #d4b8b0;
+      --charcoal: #2c2c2c;
+      --charcoal-light: #5a5a5a;
+      --gold: #b8956b;
+      --gold-light: #d4b896;
+      --white: #ffffff;
+      --font-display: "Cormorant Garamond", "Noto Sans JP", serif;
+      --font-body: "Noto Sans JP", "Noto Sans SC", "Inter", sans-serif;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 300;
+      background: var(--cream);
+      color: var(--charcoal);
+      min-height: 100vh;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .booking-container {
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--charcoal-light);
+      text-decoration: none;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      transition: color 0.3s;
+    }
+
+    .back-link:hover { color: var(--gold); }
+
+    .booking-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(184,149,107,0.1);
+      border: 1px solid rgba(184,149,107,0.2);
+      border-radius: 50px;
+      padding: 8px 20px;
+      margin-bottom: 1rem;
+      font-size: 0.75rem;
+      color: var(--gold);
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .booking-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 2.5rem);
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .booking-subtitle {
+      font-size: 1rem;
+      color: var(--charcoal-light);
+      font-weight: 300;
+    }
+
+    .booking-card {
+      background: var(--white);
+      border: 1px solid rgba(184,149,107,0.12);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .form-group {
+      margin-bottom: 1.75rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .form-input,
+    .form-select {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid rgba(184,149,107,0.2);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      color: var(--charcoal);
+      background: var(--cream);
+      transition: all 0.3s;
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(184,149,107,0.1);
+      background: var(--white);
+    }
+
+    .form-input::placeholder { color: var(--charcoal-light); }
+
+    .form-error {
+      color: #E74C3C;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      display: none;
+    }
+
+    .form-group.error .form-error { display: block; }
+    .form-group.error .form-input,
+    .form-group.error .form-select { border-color: #E74C3C; }
+
+    .submit-button {
+      width: 100%;
+      padding: 16px;
+      background: #1E8E4F;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 2px 8px rgba(30,142,79,0.25);
+    }
+
+    .submit-button:hover {
+      background: #20A05A;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(30,142,79,0.35);
+    }
+
+    .submit-button:active { transform: translateY(0); }
+    .submit-button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    .whatsapp-icon {
+      width: 20px; height: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .whatsapp-icon svg {
+      width: 100%; height: 100%;
+      fill: currentColor;
+    }
+
+    .success-message {
+      display: none;
+      background: rgba(39,174,96,0.1);
+      border: 1px solid #27AE60;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      color: #27AE60;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .success-message.show {
+      display: block;
+      animation: fadeInUp 0.5s ease-out;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 20px 15px; }
+      .booking-card { padding: 2rem 1.5rem; }
+    }
+
+    @media (max-width: 568px) {
+      .booking-card { padding: 1.75rem 1.25rem; }
+      .form-input, .form-select { padding: 12px 14px; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="booking-container">
+    <a href="index.html" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to Home
+    </a>
+
+    <div class="booking-header">
+      <div class="brand-badge">BOOK YOUR APPOINTMENT</div>
+      <h1 class="booking-title">mooi Reservation</h1>
+      <p class="booking-subtitle">Fill in the form below to book your appointment</p>
+    </div>
+
+    <div class="booking-card">
+      <div class="success-message" id="successMessage">
+        Your booking information has been prepared. You will be redirected to WhatsApp shortly...
+      </div>
+
+      <form id="bookingForm">
+        <div class="form-group" id="serviceGroup">
+          <label for="service" class="form-label">Service *</label>
+          <select id="service" name="service" class="form-select" required>
+            <option value="">Select a service</option>
+            <optgroup label="Eyelash">
+              <option value="Essential Lash">Essential Lash — ¥13,200</option>
+              <option value="Signature Custom Lash">Signature Custom Lash — ¥19,800</option>
+              <option value="Luxury Volume Lash">Luxury Volume Lash — ¥22,000</option>
+              <option value="Black Tint Lash Lift">Black Tint Lash Lift — ¥15,400</option>
+            </optgroup>
+            <optgroup label="Facial">
+              <option value="Relaxation Facial Ritual">Relaxation Facial Ritual — ¥16,500</option>
+              <option value="Deep Pore Purifying Facial">Deep Pore Purifying Facial — ¥22,000</option>
+              <option value="Japanese Skin Renewal Ritual">Japanese Skin Renewal Ritual — ¥27,500</option>
+            </optgroup>
+            <optgroup label="Nail">
+              <option value="Essential Gel Nails (Off Included)">Essential Gel Nails (Off Included) — ¥16,500</option>
+              <option value="Essential Gel Nails (No Removal)">Essential Gel Nails (No Removal) — ¥11,000</option>
+              <option value="Signature Custom Nails (Off Included)">Signature Custom Nails (Off Included) — ¥26,400</option>
+              <option value="Signature Custom Nails (No Removal)">Signature Custom Nails (No Removal) — ¥19,800</option>
+            </optgroup>
+            <optgroup label="Foot Care">
+              <option value="Essential Foot Gel">Essential Foot Gel — ¥13,200</option>
+              <option value="Signature Custom Foot">Signature Custom Foot — ¥17,600</option>
+            </optgroup>
+          </select>
+          <div class="form-error">Please select a service</div>
+        </div>
+
+        <div class="form-group" id="dateGroup">
+          <label for="date" class="form-label">Date *</label>
+          <input type="date" id="date" name="date" class="form-input" required>
+          <div class="form-error">Please select a date</div>
+        </div>
+
+        <div class="form-group" id="timeGroup">
+          <label for="time" class="form-label">Time *</label>
+          <input type="time" id="time" name="time" class="form-input" required>
+          <div class="form-error">Please select a time</div>
+        </div>
+
+        <div class="form-group" id="guestsGroup">
+          <label for="guests" class="form-label">Number of Guests *</label>
+          <select id="guests" name="guests" class="form-select" required>
+            <option value="">Select number of guests</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+          </select>
+          <div class="form-error">Please select number of guests</div>
+        </div>
+
+        <div class="form-group" id="nameGroup">
+          <label for="name" class="form-label">Name *</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
+          <div class="form-error">Please enter your name</div>
+        </div>
+
+        <button type="submit" class="submit-button" id="submitButton">
+          <span class="whatsapp-icon">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.884-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </span>
+          <span>Submit &amp; Open WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const WHATSAPP_NUMBER = '85290744644';
+
+    const dateInput = document.getElementById('date');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+
+    function validateForm() {
+      let isValid = true;
+      document.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
+
+      if (!document.getElementById('name').value.trim()) {
+        document.getElementById('nameGroup').classList.add('error');
+        isValid = false;
+      }
+      if (!document.getElementById('date').value) {
+        document.getElementById('dateGroup').classList.add('error');
+        isValid = false;
+      }
+      if (!document.getElementById('time').value) {
+        document.getElementById('timeGroup').classList.add('error');
+        isValid = false;
+      }
+      if (!document.getElementById('guests').value) {
+        document.getElementById('guestsGroup').classList.add('error');
+        isValid = false;
+      }
+      if (!document.getElementById('service').value) {
+        document.getElementById('serviceGroup').classList.add('error');
+        isValid = false;
+      }
+      return isValid;
+    }
+
+    function formatDate(dateString) {
+      const date = new Date(dateString + 'T00:00:00');
+      return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+
+    function formatTime(timeString) {
+      const [hours, minutes] = timeString.split(':');
+      const hour = parseInt(hours);
+      const ampm = hour >= 12 ? 'PM' : 'AM';
+      const displayHour = hour % 12 || 12;
+      return displayHour + ':' + minutes + ' ' + ampm;
+    }
+
+    function buildWhatsAppMessage(formData) {
+      const name = formData.get('name');
+      const date = formatDate(formData.get('date'));
+      const time = formatTime(formData.get('time'));
+      const guests = formData.get('guests');
+      const service = formData.get('service');
+
+      let message = 'Hello, I would like to make a reservation at mooi.\n\n';
+      message += 'Name: ' + name + '\n';
+      message += 'Date: ' + date + '\n';
+      message += 'Time: ' + time + '\n';
+      message += 'Number of Guests: ' + guests + '\n';
+      message += 'Service: ' + service + '\n';
+
+      return encodeURIComponent(message);
+    }
+
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (!validateForm()) return;
+
+      const formData = new FormData(this);
+      const message = buildWhatsAppMessage(formData);
+      const whatsappUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + message;
+
+      const successMessage = document.getElementById('successMessage');
+      const submitButton = document.getElementById('submitButton');
+
+      successMessage.classList.add('show');
+      submitButton.disabled = true;
+      submitButton.textContent = 'Redirecting...';
+
+      setTimeout(function() {
+        window.open(whatsappUrl, '_blank');
+      }, 500);
+    });
+
+    document.querySelectorAll('.form-input, .form-select').forEach(function(input) {
+      input.addEventListener('blur', function() {
+        var group = this.closest('.form-group');
+        if (this.hasAttribute('required') && !this.value.trim()) {
+          group.classList.add('error');
+        } else {
+          group.classList.remove('error');
+        }
+      });
+      input.addEventListener('input', function() {
+        var group = this.closest('.form-group');
+        if (group.classList.contains('error') && this.value.trim()) {
+          group.classList.remove('error');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
