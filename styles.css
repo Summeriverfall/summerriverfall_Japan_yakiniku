@@ -1094,7 +1094,7 @@ html[lang="zh-CN"] {
   background: var(--white);
   border: 1px solid rgba(184, 149, 107, 0.15);
   border-radius: 12px;
-  padding: 0.65rem 1rem 0.65rem 11rem;
+  padding: 0.65rem 1rem 0.65rem 7.5rem;
   text-decoration: none;
   color: var(--charcoal);
   transition: all 0.3s ease;
@@ -1349,7 +1349,7 @@ html[lang="zh-CN"] {
   }
 
   .lang-card {
-    padding: 0.6rem 1rem 0.6rem 8.5rem;
+    padding: 0.6rem 1rem 0.6rem 5.5rem;
   }
 
   .lang-store-card {
@@ -1377,7 +1377,7 @@ html[lang="zh-CN"] {
   }
 
   .lang-card {
-    padding: 0.6rem 0.8rem 0.6rem 6rem;
+    padding: 0.6rem 0.8rem 0.6rem 4rem;
   }
 
   .lang-card-name {
