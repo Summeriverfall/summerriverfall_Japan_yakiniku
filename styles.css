@@ -301,6 +301,9 @@ html[lang="zh-CN"] {
   line-height: 1.15;
   letter-spacing: 0.02em;
   margin-bottom: var(--space-md);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-sub {
@@ -344,6 +347,36 @@ html[lang="zh-CN"] {
 .btn-outline:hover {
   background: var(--charcoal);
   color: var(--cream);
+}
+
+/* Hero quick nav pills */
+.hero-quick-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: var(--space-lg);
+}
+
+.hero-nav-pill {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--charcoal);
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.hero-nav-pill:hover {
+  background: var(--charcoal);
+  color: var(--cream);
+  border-color: var(--charcoal);
 }
 
 .hero-scroll {
@@ -913,6 +946,20 @@ html[lang="zh-CN"] {
     gap: var(--space-md);
   }
 
+  .nav-menu .lang-switch {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-top: var(--space-sm);
+    border-top: 1px solid rgba(184,149,107,0.1);
+    margin-top: 0.25rem;
+  }
+
+  .nav-menu .lang-switch a {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
+  }
+
   .intro-features {
     width: 100%;
   }
@@ -1194,13 +1241,13 @@ html[lang="zh-CN"] {
   transform: scale(1.02);
 }
 
-.lang-store-address {
+.lang-store-addr-section {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   text-align: center;
   padding-top: 0.5rem;
-  border-top: 1px solid rgba(184, 149, 107, 0.12);
+  animation: langFadeInUp 0.8s ease-out 1s both;
 }
 
 .lang-store-label {
