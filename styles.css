@@ -1431,12 +1431,16 @@ html[lang="zh-CN"] .logo {
   }
 
   .lang-buttons {
-    margin-top: 0.75rem;
+    margin-top: 1rem;
+    gap: 0.65rem;
   }
 
   .lang-btn-reserve,
   .lang-btn-phone {
-    max-width: 280px;
+    width: auto;
+    max-width: none;
+    padding: 12px 28px;
+    font-size: 0.85rem;
   }
 }
 
@@ -1481,14 +1485,16 @@ html[lang="zh-CN"] .logo {
   }
 
   .lang-buttons {
-    margin-top: 0.75rem;
+    margin-top: 1.25rem;
+    gap: 0.6rem;
   }
 
   .lang-btn-reserve,
   .lang-btn-phone {
-    padding: 12px 20px;
-    font-size: 0.85rem;
-    max-width: 240px;
+    width: auto;
+    max-width: none;
+    padding: 11px 22px;
+    font-size: 0.8rem;
   }
 }
 
