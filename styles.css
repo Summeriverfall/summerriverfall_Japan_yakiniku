@@ -1437,17 +1437,9 @@ html[lang="zh-CN"] .logo {
 
   .lang-btn-reserve,
   .lang-btn-phone {
-    width: auto;
+    flex: 1;
     padding: 12px 28px;
     font-size: 0.85rem;
-  }
-
-  .lang-btn-reserve {
-    max-width: 200px;
-  }
-
-  .lang-btn-phone {
-    max-width: 260px;
   }
 }
 
@@ -1498,17 +1490,9 @@ html[lang="zh-CN"] .logo {
 
   .lang-btn-reserve,
   .lang-btn-phone {
-    width: auto;
+    flex: 1;
     padding: 11px 22px;
     font-size: 0.8rem;
-  }
-
-  .lang-btn-reserve {
-    max-width: 170px;
-  }
-
-  .lang-btn-phone {
-    max-width: 240px;
   }
 }
 
