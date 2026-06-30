@@ -40,6 +40,8 @@
         <div class="hero-slide" style="background-image: url(../assets/images/interior-dining.jpg);"></div>
         <div class="hero-slide" style="background-image: url(../assets/images/interior-dining2.jpg);"></div>
         <div class="hero-slide" style="background-image: url(../assets/images/interior-group.jpg);"></div>
+        <div class="hero-slide" style="background-image: url(../assets/images/promo.jpg);"></div>
+        <div class="hero-slide" style="background-image: url(../assets/images/course-drink.jpg);"></div>
       </div>
       <div class="hero-grid-overlay"></div>
       <div class="hero-content container">
@@ -58,6 +60,8 @@
         <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
         <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
         <button class="hero-dot" data-index="3" aria-label="Slide 4"></button>
+        <button class="hero-dot" data-index="4" aria-label="Slide 5"></button>
+        <button class="hero-dot" data-index="5" aria-label="Slide 6"></button>
       </div>
       <div class="hero-scroll">
         <span>Scroll</span>
@@ -93,26 +97,125 @@
       <div class="container">
         <header class="section-header">
           <p class="section-label">メニュー</p>
-          <h2>Our Offerings</h2>
-          <p class="section-sub">上質なお肉、厳選コース、豊富なドリンク。</p>
+          <h2>コースのご案内</h2>
+          <p class="section-sub">独自ルートで仕入れた最高級和牛を、厳選コースでご堪能ください。</p>
         </header>
-        <div class="service-grid">
-          <article class="concept-card">
-            <div class="concept-icon">&#x1F969;</div>
-            <h3>COURSE</h3>
-            <p>お肉をがっつり味わいたい時や、色々なお肉を味わいたい時など、その日の気分に合うコースをお楽しみいただけます。</p>
+
+        <!-- Course Cards -->
+        <div class="service-grid service-grid-2">
+          <article class="service-card">
+            <div class="service-card-header">
+              <h3>京都園コース</h3>
+              <p class="price">¥16,000 <span style="font-size:0.75rem;color:var(--text-muted);font-weight:300;">/ お一人様（税込）</span></p>
+            </div>
+            <p class="service-desc">和牛シャトーブリアンとトリュフのせサーロインすき焼きをメインにした、京都園の定番コース。</p>
+            <ul class="includes">
+              <li>和牛シャトーブリアン</li>
+              <li>トリュフのせサーロインすき焼き</li>
+              <li>季節の前菜・サラダ</li>
+              <li>本日のおすすめ部位</li>
+              <li>ご飯・スープ・デザート</li>
+            </ul>
+            <a href="../booking.html?course=kyotoen" class="btn-reserve">このコースを予約</a>
           </article>
-          <article class="concept-card featured">
-            <span class="badge">自慢の一品</span>
-            <div class="concept-icon">&#x1F402;</div>
-            <h3>FOOD</h3>
-            <p>仕入れにこだわり、「京都園以外には卸していない」特別ルートから質の高いヒレ肉を仕入れております。</p>
+
+          <article class="service-card featured">
+            <span class="badge">おすすめ</span>
+            <div class="service-card-header">
+              <h3>プレミアムコース</h3>
+              <p class="price">¥20,000 <span style="font-size:0.75rem;color:var(--text-muted);font-weight:300;">/ お一人様（税込）</span></p>
+            </div>
+            <p class="service-desc">和牛シャトーブリアンと和牛ヒレの両方を味わえる贅沢コース。飲み放題付き。</p>
+            <ul class="includes">
+              <li>和牛シャトーブリアン</li>
+              <li>和牛ヒレ</li>
+              <li>トリュフのせサーロインすき焼き</li>
+              <li>季節の厳選前菜</li>
+              <li>本日の最上級部位</li>
+              <li>ご飯・スープ・デザート</li>
+              <li class="gift">飲み放題付き</li>
+            </ul>
+            <a href="../booking.html?course=premium" class="btn-reserve">このコースを予約</a>
           </article>
-          <article class="concept-card">
-            <div class="concept-icon">&#x1F377;</div>
-            <h3>DRINK</h3>
-            <p>定番のお酒からヴィンテージワインなどの高級酒まで、様々な種類のお酒を豊富にご用意しております。</p>
-          </article>
+        </div>
+
+        <!-- A La Carte -->
+        <div class="subsection">
+          <h3 class="subsection-title">一品料理</h3>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>和牛シャトーブリアン</h3>
+                <p class="price">¥11,500</p>
+                <p class="price-sub">1切</p>
+              </div>
+              <p class="service-desc">ヒレ肉の中でも最上級の部位。炭火で焼き上げた極上の柔らかさ。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>和牛ヒレ</h3>
+                <p class="price">¥9,500</p>
+                <p class="price-sub">1切</p>
+              </div>
+              <p class="service-desc">独自ルートで仕入れた上質な和牛ヒレ。赤身と霜降りの絶妙なバランス。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>トリュフすき焼き</h3>
+                <p class="price">¥7,500</p>
+              </div>
+              <p class="service-desc">上質なサーロインを使ったすき焼きに、香り高いトリュフを添えて。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>ユッケ</h3>
+                <p class="price">¥2,200</p>
+              </div>
+              <p class="service-desc">新鮮な和牛を特製ダレで仕上げた一品。上品な前菜として。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>タン</h3>
+                <p class="price">¥2,800</p>
+              </div>
+              <p class="service-desc">厚切りの上質な牛タンを炭火で香ばしく焼き上げました。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>ハラミ</h3>
+                <p class="price">¥3,000</p>
+              </div>
+              <p class="service-desc">味わい深いハラミ。焼肉の定番を京都園品質で。</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Drinks -->
+        <div class="subsection">
+          <h3 class="subsection-title">ドリンク</h3>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>ヴィンテージワイン</h3>
+                <p class="price">¥8,000〜</p>
+              </div>
+              <p class="service-desc">最高級和牛に合う、厳選されたヴィンテージワインを取り揃えております。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>高級日本酒</h3>
+                <p class="price">¥1,200〜</p>
+              </div>
+              <p class="service-desc">全国各地の名だたる酒蔵から、料理に合う日本酒を厳選しております。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>飲み放題</h3>
+                <p class="price">+¥4,000</p>
+              </div>
+              <p class="service-desc">京都園コースに追加可能。プレミアムコースは標準で飲み放題付き。</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -126,7 +229,7 @@
         <div class="env-carousel" id="envCarousel">
           <div class="env-carousel-track" id="envTrack">
             <div class="env-carousel-slide">
-              <img src="../assets/images/yakiniku-meat.jpg" alt="京都園 店内" loading="lazy">
+              <img src="../assets/images/yakiniku-meat.jpg" alt="京都園 シャトーブリアン" loading="lazy">
             </div>
             <div class="env-carousel-slide">
               <img src="../assets/images/interior-dining.jpg" alt="京都園 内装" loading="lazy">
@@ -138,13 +241,25 @@
               <img src="../assets/images/interior-group.jpg" alt="京都園 体験" loading="lazy">
             </div>
             <div class="env-carousel-slide">
-              <img src="../assets/images/course-menu.jpg" alt="京都園 料理" loading="lazy">
+              <img src="../assets/images/course-menu.jpg" alt="京都園 コース料理" loading="lazy">
             </div>
             <div class="env-carousel-slide">
-              <img src="../assets/images/food-menu.jpg" alt="京都園" loading="lazy">
+              <img src="../assets/images/food-menu.jpg" alt="京都園 和牛" loading="lazy">
             </div>
             <div class="env-carousel-slide">
-              <img src="../assets/images/drink-sake.jpg" alt="京都園" loading="lazy">
+              <img src="../assets/images/drink-sake.jpg" alt="京都園 日本酒" loading="lazy">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/drink-wine.jpg" alt="京都園 ワイン" loading="lazy">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/drink-menu.jpg" alt="京都園 ドリンク" loading="lazy">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/course-drink.jpg" alt="京都園 コースドリンク" loading="lazy">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/promo.jpg" alt="京都園 プロモーション" loading="lazy">
             </div>
           </div>
         </div>
@@ -168,7 +283,7 @@
             </div>
             <div class="visit-item">
               <h4>営業時間</h4>
-              <p>15:00 – 23:00<br>不定休</p>
+              <p>17:00 – 23:00（L.O. 料理21:30、ドリンク22:00）<br>ランチ: 11:00 – 14:00 金土日祝<br>不定休</p>
             </div>
             <div class="visit-item">
               <h4>電話</h4>

@@ -40,6 +40,8 @@
         <div class="hero-slide" style="background-image: url(../assets/images/interior-dining.jpg);"></div>
         <div class="hero-slide" style="background-image: url(../assets/images/interior-dining2.jpg);"></div>
         <div class="hero-slide" style="background-image: url(../assets/images/interior-group.jpg);"></div>
+        <div class="hero-slide" style="background-image: url(../assets/images/promo.jpg);"></div>
+        <div class="hero-slide" style="background-image: url(../assets/images/course-drink.jpg);"></div>
       </div>
       <div class="hero-grid-overlay"></div>
       <div class="hero-content container">
@@ -58,6 +60,8 @@
         <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
         <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
         <button class="hero-dot" data-index="3" aria-label="Slide 4"></button>
+        <button class="hero-dot" data-index="4" aria-label="Slide 5"></button>
+        <button class="hero-dot" data-index="5" aria-label="Slide 6"></button>
       </div>
       <div class="hero-scroll">
         <span>Scroll</span>
@@ -94,26 +98,125 @@
       <div class="container">
         <header class="section-header">
           <p class="section-label">Menu</p>
-          <h2>Our Offerings</h2>
-          <p class="section-sub">Premium meat, curated courses, and an abundant drink selection.</p>
+          <h2>Our Courses</h2>
+          <p class="section-sub">Curated dining experiences featuring premium wagyu, sourced through an exclusive route.</p>
         </header>
-        <div class="service-grid">
-          <article class="concept-card">
-            <div class="concept-icon">&#x1F969;</div>
-            <h3>Course</h3>
-            <p>Curated courses for every occasion — whether you want to savor a variety of cuts or indulge in a hearty meat feast.</p>
+
+        <!-- Course Cards -->
+        <div class="service-grid service-grid-2">
+          <article class="service-card">
+            <div class="service-card-header">
+              <h3>京都園 Course</h3>
+              <p class="price">¥16,000 <span style="font-size:0.75rem;color:var(--text-muted);font-weight:300;">/ person (tax incl.)</span></p>
+            </div>
+            <p class="service-desc">Our signature course featuring premium wagyu chateaubriand and truffle-topped sirloin sukiyaki. A perfect introduction to Kyotoen.</p>
+            <ul class="includes">
+              <li>Wagyu Chateaubriand</li>
+              <li>Truffle Sirloin Sukiyaki</li>
+              <li>Seasonal appetizers &amp; salad</li>
+              <li>Today's selected cuts</li>
+              <li>Rice, soup &amp; dessert</li>
+            </ul>
+            <a href="../booking.html?course=kyotoen" class="btn-reserve">Reserve This Course</a>
           </article>
-          <article class="concept-card featured">
-            <span class="badge">Signature</span>
-            <div class="concept-icon">&#x1F402;</div>
-            <h3>Food</h3>
-            <p>High-quality filet sourced through an exclusive route. Experience chateaubriand and premium cuts unavailable elsewhere.</p>
+
+          <article class="service-card featured">
+            <span class="badge">Recommended</span>
+            <div class="service-card-header">
+              <h3>Premium Course</h3>
+              <p class="price">¥20,000 <span style="font-size:0.75rem;color:var(--text-muted);font-weight:300;">/ person (tax incl.)</span></p>
+            </div>
+            <p class="service-desc">The ultimate Kyotoen experience — both chateaubriand and wagyu filet, with premium all-you-can-drink included.</p>
+            <ul class="includes">
+              <li>Wagyu Chateaubriand</li>
+              <li>Wagyu Filet</li>
+              <li>Truffle Sirloin Sukiyaki</li>
+              <li>Premium seasonal appetizers</li>
+              <li>Today's best selections</li>
+              <li>Rice, soup &amp; dessert</li>
+              <li class="gift">All-you-can-drink included</li>
+            </ul>
+            <a href="../booking.html?course=premium" class="btn-reserve">Reserve This Course</a>
           </article>
-          <article class="concept-card">
-            <div class="concept-icon">&#x1F377;</div>
-            <h3>Drink</h3>
-            <p>From classic beverages to vintage wines and luxury sake — a broad selection to complement your meal.</p>
-          </article>
+        </div>
+
+        <!-- A La Carte -->
+        <div class="subsection">
+          <h3 class="subsection-title">A La Carte</h3>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>Wagyu Chateaubriand</h3>
+                <p class="price">¥11,500</p>
+                <p class="price-sub">per slice</p>
+              </div>
+              <p class="service-desc">The pinnacle of tenderness — the finest cut of wagyu filet, charcoal-grilled to perfection.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>Wagyu Filet</h3>
+                <p class="price">¥9,500</p>
+                <p class="price-sub">per slice</p>
+              </div>
+              <p class="service-desc">Exquisite lean wagyu filet with delicate marbling, sourced through our exclusive supply route.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>Truffle Sukiyaki</h3>
+                <p class="price">¥7,500</p>
+              </div>
+              <p class="service-desc">Premium sirloin sukiyaki topped with aromatic truffle — a house specialty.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>Wagyu Tartare</h3>
+                <p class="price">¥2,200</p>
+              </div>
+              <p class="service-desc">Fresh wagyu tartare seasoned with our house blend. A delicate, refined starter.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>Beef Tongue</h3>
+                <p class="price">¥2,800</p>
+              </div>
+              <p class="service-desc">Thick-cut premium beef tongue, grilled over charcoal for a smoky finish.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>Skirt Steak (Harami)</h3>
+                <p class="price">¥3,000</p>
+              </div>
+              <p class="service-desc">Rich, flavorful skirt steak with a satisfying texture — a yakiniku classic.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Drinks -->
+        <div class="subsection">
+          <h3 class="subsection-title">Drinks</h3>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>Vintage Wine</h3>
+                <p class="price">from ¥8,000</p>
+              </div>
+              <p class="service-desc">A curated collection of vintage wines selected to complement premium wagyu.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>Premium Sake</h3>
+                <p class="price">from ¥1,200</p>
+              </div>
+              <p class="service-desc">Carefully chosen luxury sake from renowned breweries across Japan.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>All-You-Can-Drink</h3>
+                <p class="price">+¥4,000</p>
+              </div>
+              <p class="service-desc">Add to the 京都園 Course for unlimited drinks. Included by default in the Premium Course.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -127,7 +230,7 @@
         <div class="env-carousel" id="envCarousel">
           <div class="env-carousel-track" id="envTrack">
             <div class="env-carousel-slide">
-              <img src="../assets/images/yakiniku-meat.jpg" alt="Kyotoen interior" loading="lazy">
+              <img src="../assets/images/yakiniku-meat.jpg" alt="Kyotoen chateaubriand" loading="lazy">
             </div>
             <div class="env-carousel-slide">
               <img src="../assets/images/interior-dining.jpg" alt="Kyotoen dining" loading="lazy">
@@ -139,13 +242,25 @@
               <img src="../assets/images/interior-group.jpg" alt="Kyotoen experience" loading="lazy">
             </div>
             <div class="env-carousel-slide">
-              <img src="../assets/images/course-menu.jpg" alt="Kyotoen cuisine" loading="lazy">
+              <img src="../assets/images/course-menu.jpg" alt="Kyotoen course cuisine" loading="lazy">
             </div>
             <div class="env-carousel-slide">
-              <img src="../assets/images/food-menu.jpg" alt="Kyotoen dining" loading="lazy">
+              <img src="../assets/images/food-menu.jpg" alt="Kyotoen wagyu" loading="lazy">
             </div>
             <div class="env-carousel-slide">
-              <img src="../assets/images/drink-sake.jpg" alt="Kyotoen" loading="lazy">
+              <img src="../assets/images/drink-sake.jpg" alt="Kyotoen sake selection" loading="lazy">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/drink-wine.jpg" alt="Kyotoen wine" loading="lazy">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/drink-menu.jpg" alt="Kyotoen drinks" loading="lazy">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/course-drink.jpg" alt="Kyotoen course with drink" loading="lazy">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/promo.jpg" alt="Kyotoen promo" loading="lazy">
             </div>
           </div>
         </div>
@@ -170,7 +285,7 @@
             </div>
             <div class="visit-item">
               <h4>Hours</h4>
-              <p>15:00 – 23:00<br>Irregular holidays</p>
+              <p>17:00 – 23:00 (L.O. food 21:30, drink 22:00)<br>Lunch: 11:00 – 14:00 Fri/Sat/Sun/holidays<br>Irregular holidays</p>
             </div>
             <div class="visit-item">
               <h4>Phone</h4>

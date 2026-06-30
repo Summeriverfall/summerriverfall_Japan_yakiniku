@@ -40,6 +40,8 @@
         <div class="hero-slide" style="background-image: url(../assets/images/interior-dining.jpg);"></div>
         <div class="hero-slide" style="background-image: url(../assets/images/interior-dining2.jpg);"></div>
         <div class="hero-slide" style="background-image: url(../assets/images/interior-group.jpg);"></div>
+        <div class="hero-slide" style="background-image: url(../assets/images/promo.jpg);"></div>
+        <div class="hero-slide" style="background-image: url(../assets/images/course-drink.jpg);"></div>
       </div>
       <div class="hero-grid-overlay"></div>
       <div class="hero-content container">
@@ -58,6 +60,8 @@
         <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
         <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
         <button class="hero-dot" data-index="3" aria-label="Slide 4"></button>
+        <button class="hero-dot" data-index="4" aria-label="Slide 5"></button>
+        <button class="hero-dot" data-index="5" aria-label="Slide 6"></button>
       </div>
       <div class="hero-scroll">
         <span>Scroll</span>
@@ -94,26 +98,125 @@
       <div class="container">
         <header class="section-header">
           <p class="section-label">菜单</p>
-          <h2>Our Offerings</h2>
-          <p class="section-sub">顶级肉品、精选套餐、丰富酒水。</p>
+          <h2>套餐介绍</h2>
+          <p class="section-sub">通过独家渠道采购的顶级和牛，为您呈现精心策划的美食体验。</p>
         </header>
-        <div class="service-grid">
-          <article class="concept-card">
-            <div class="concept-icon">&#x1F969;</div>
-            <h3>套餐<br><small style="font-weight:300;font-size:0.85rem;">COURSE</small></h3>
-            <p>无论是想大快朵颐还是品尝多种部位，都能找到适合您心情的套餐。</p>
+
+        <!-- Course Cards -->
+        <div class="service-grid service-grid-2">
+          <article class="service-card">
+            <div class="service-card-header">
+              <h3>京都园套餐</h3>
+              <p class="price">¥16,000 <span style="font-size:0.75rem;color:var(--text-muted);font-weight:300;">/ 位（含税）</span></p>
+            </div>
+            <p class="service-desc">以和牛夏多布里昂和松露沙朗寿喜烧为主打的招牌套餐。初次体验京都园的完美之选。</p>
+            <ul class="includes">
+              <li>和牛夏多布里昂</li>
+              <li>松露沙朗寿喜烧</li>
+              <li>时令前菜与沙拉</li>
+              <li>当日精选部位</li>
+              <li>米饭、汤品与甜点</li>
+            </ul>
+            <a href="../booking.html?course=kyotoen" class="btn-reserve">预约此套餐</a>
           </article>
-          <article class="concept-card featured">
-            <span class="badge">招牌</span>
-            <div class="concept-icon">&#x1F402;</div>
-            <h3>单点<br><small style="font-weight:300;font-size:0.85rem;">FOOD</small></h3>
-            <p>通过独家渠道采购的高品质菲力肉，体验在其他餐厅无法品尝到的夏多布里昂和顶级部位。</p>
+
+          <article class="service-card featured">
+            <span class="badge">推荐</span>
+            <div class="service-card-header">
+              <h3>尊享套餐</h3>
+              <p class="price">¥20,000 <span style="font-size:0.75rem;color:var(--text-muted);font-weight:300;">/ 位（含税）</span></p>
+            </div>
+            <p class="service-desc">同时享用夏多布里昂与和牛菲力的奢华套餐，含无限畅饮，体验京都园的最高水准。</p>
+            <ul class="includes">
+              <li>和牛夏多布里昂</li>
+              <li>和牛菲力</li>
+              <li>松露沙朗寿喜烧</li>
+              <li>时令精选前菜</li>
+              <li>当日最佳部位</li>
+              <li>米饭、汤品与甜点</li>
+              <li class="gift">含无限畅饮</li>
+            </ul>
+            <a href="../booking.html?course=premium" class="btn-reserve">预约此套餐</a>
           </article>
-          <article class="concept-card">
-            <div class="concept-icon">&#x1F377;</div>
-            <h3>饮品<br><small style="font-weight:300;font-size:0.85rem;">DRINK</small></h3>
-            <p>从经典酒款到年份葡萄酒、高级清酒，丰富的饮品选择为您的用餐体验锦上添花。</p>
-          </article>
+        </div>
+
+        <!-- A La Carte -->
+        <div class="subsection">
+          <h3 class="subsection-title">单点菜单</h3>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>和牛夏多布里昂</h3>
+                <p class="price">¥11,500</p>
+                <p class="price-sub">每片</p>
+              </div>
+              <p class="service-desc">菲力中最顶级的部位，炭火烤制，极致柔嫩，入口即化。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>和牛菲力</h3>
+                <p class="price">¥9,500</p>
+                <p class="price-sub">每片</p>
+              </div>
+              <p class="service-desc">通过独家渠道采购的上等和牛菲力，赤身与霜降的绝妙平衡。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>松露寿喜烧</h3>
+                <p class="price">¥7,500</p>
+              </div>
+              <p class="service-desc">上等沙朗牛肉寿喜烧搭配芳香松露——本店特色菜品。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>生拌和牛</h3>
+                <p class="price">¥2,200</p>
+              </div>
+              <p class="service-desc">新鲜和牛以特制酱料调味的精品前菜，细腻雅致的开胃之选。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>牛舌</h3>
+                <p class="price">¥2,800</p>
+              </div>
+              <p class="service-desc">厚切上等牛舌，炭火烤制，香气四溢。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>横膈膜肉（Harami）</h3>
+                <p class="price">¥3,000</p>
+              </div>
+              <p class="service-desc">风味浓郁、口感丰富的横膈膜肉——烧肉经典之选。</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Drinks -->
+        <div class="subsection">
+          <h3 class="subsection-title">饮品</h3>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>年份葡萄酒</h3>
+                <p class="price">¥8,000起</p>
+              </div>
+              <p class="service-desc">精心挑选的年份葡萄酒系列，与顶级和牛完美搭配。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>高级清酒</h3>
+                <p class="price">¥1,200起</p>
+              </div>
+              <p class="service-desc">从日本各地知名酒藏严选的优质清酒，为您的用餐体验锦上添花。</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card-header">
+                <h3>无限畅饮</h3>
+                <p class="price">+¥4,000</p>
+              </div>
+              <p class="service-desc">可追加至京都园套餐。尊享套餐已标配无限畅饮。</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -127,10 +230,10 @@
         <div class="env-carousel" id="envCarousel">
           <div class="env-carousel-track" id="envTrack">
             <div class="env-carousel-slide">
-              <img src="../assets/images/yakiniku-meat.jpg" alt="京都园 店内" loading="lazy">
+              <img src="../assets/images/yakiniku-meat.jpg" alt="京都园 夏多布里昂" loading="lazy">
             </div>
             <div class="env-carousel-slide">
-              <img src="../assets/images/interior-dining.jpg" alt="京都园 内装" loading="lazy">
+              <img src="../assets/images/interior-dining.jpg" alt="京都园 店内" loading="lazy">
             </div>
             <div class="env-carousel-slide">
               <img src="../assets/images/interior-dining2.jpg" alt="京都园 氛围" loading="lazy">
@@ -139,13 +242,25 @@
               <img src="../assets/images/interior-group.jpg" alt="京都园 体验" loading="lazy">
             </div>
             <div class="env-carousel-slide">
-              <img src="../assets/images/course-menu.jpg" alt="京都园 料理" loading="lazy">
+              <img src="../assets/images/course-menu.jpg" alt="京都园 套餐料理" loading="lazy">
             </div>
             <div class="env-carousel-slide">
-              <img src="../assets/images/food-menu.jpg" alt="京都园" loading="lazy">
+              <img src="../assets/images/food-menu.jpg" alt="京都园 和牛" loading="lazy">
             </div>
             <div class="env-carousel-slide">
-              <img src="../assets/images/drink-sake.jpg" alt="京都园" loading="lazy">
+              <img src="../assets/images/drink-sake.jpg" alt="京都园 清酒" loading="lazy">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/drink-wine.jpg" alt="京都园 葡萄酒" loading="lazy">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/drink-menu.jpg" alt="京都园 饮品" loading="lazy">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/course-drink.jpg" alt="京都园 套餐饮品" loading="lazy">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/promo.jpg" alt="京都园 宣传" loading="lazy">
             </div>
           </div>
         </div>
@@ -170,7 +285,7 @@
             </div>
             <div class="visit-item">
               <h4>营业时间</h4>
-              <p>15:00 – 23:00<br>不定休</p>
+              <p>17:00 – 23:00（最后点餐 21:30，最后点酒 22:00）<br>午餐: 11:00 – 14:00 周五/六/日/节假日<br>不定休</p>
             </div>
             <div class="visit-item">
               <h4>电话</h4>
