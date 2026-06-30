@@ -1430,9 +1430,13 @@ html[lang="zh-CN"] .logo {
     padding: 1rem 1.25rem;
   }
 
+  .lang-buttons {
+    margin-top: 0.75rem;
+  }
+
   .lang-btn-reserve,
   .lang-btn-phone {
-    max-width: 100%;
+    max-width: 280px;
   }
 }
 
@@ -1476,10 +1480,15 @@ html[lang="zh-CN"] .logo {
     font-size: 0.7rem;
   }
 
+  .lang-buttons {
+    margin-top: 0.75rem;
+  }
+
   .lang-btn-reserve,
   .lang-btn-phone {
-    padding: 14px 28px;
-    font-size: 0.95rem;
+    padding: 12px 20px;
+    font-size: 0.85rem;
+    max-width: 240px;
   }
 }
 
