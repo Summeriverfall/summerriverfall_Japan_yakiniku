@@ -77,7 +77,6 @@
     var current = 0;
     var interval;
 
-    /* Build dots */
     for (var i = 0; i < total; i++) {
       var dot = document.createElement("button");
       dot.className = "env-dot" + (i === 0 ? " active" : "");
@@ -149,7 +148,7 @@
     { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
   );
 
-  document.querySelectorAll(".service-card, .feature, .intro-text, .env-carousel").forEach(function (el) {
+  document.querySelectorAll(".service-card, .concept-card, .feature, .intro-text, .env-carousel").forEach(function (el) {
     el.style.opacity = "0";
     el.style.transform = "translateY(24px)";
     el.style.transition = "opacity 0.6s ease, transform 0.6s ease";

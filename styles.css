@@ -1,17 +1,19 @@
 /* ========================================
-   mooi — Japanese Beauty Salon
+   京都園 — Hire Yakiniku Kyotoen
    ======================================== */
 
 :root {
-  --cream: #faf7f2;
-  --cream-dark: #f0ebe3;
-  --blush: #e8d5d0;
-  --blush-deep: #d4b8b0;
-  --charcoal: #2c2c2c;
-  --charcoal-light: #5a5a5a;
-  --gold: #b8956b;
-  --gold-light: #d4b896;
+  --bg: #0f0f0f;
+  --bg-alt: #161616;
+  --bg-card: #1c1c1c;
+  --accent: #c8a150;
+  --accent-light: #d4b878;
+  --text: #f0ead8;
+  --text-muted: #a09888;
   --white: #ffffff;
+  --border: rgba(200, 161, 80, 0.15);
+  --border-light: rgba(255, 255, 255, 0.08);
+  --red: #b71c1c;
 
   --font-display: "Cormorant Garamond", "Noto Sans JP", serif;
   --font-body: "Noto Sans JP", sans-serif;
@@ -46,8 +48,8 @@ body {
   font-weight: 300;
   font-size: 0.9375rem;
   line-height: 1.7;
-  color: var(--charcoal);
-  background: var(--cream);
+  color: var(--text);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -80,15 +82,15 @@ ul {
   right: 0;
   z-index: 100;
   height: var(--header-h);
-  background: rgba(250, 247, 242, 0.92);
+  background: rgba(15, 15, 15, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 .header.scrolled {
-  border-color: rgba(184, 149, 107, 0.15);
-  box-shadow: 0 1px 20px rgba(44, 44, 44, 0.04);
+  border-color: var(--border);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
 }
 
 .nav {
@@ -103,7 +105,7 @@ ul {
   font-size: 1.75rem;
   font-weight: 500;
   letter-spacing: 0.12em;
-  color: var(--charcoal);
+  color: var(--text);
 }
 
 .nav-menu {
@@ -126,19 +128,19 @@ ul {
 .lang-switch a {
   font-size: 0.6875rem;
   letter-spacing: 0.06em;
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   padding: 0.25rem 0.5rem;
   border-radius: 1px;
   transition: all var(--transition);
 }
 
 .lang-switch a:hover {
-  color: var(--gold);
+  color: var(--accent);
 }
 
 .lang-switch a.active {
-  color: var(--gold);
-  background: rgba(184, 149, 107, 0.1);
+  color: var(--accent);
+  background: rgba(200, 161, 80, 0.1);
 }
 
 html[lang="zh-CN"] {
@@ -154,7 +156,7 @@ html[lang="zh-CN"] .logo {
   font-size: 0.8125rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   position: relative;
 }
 
@@ -165,12 +167,12 @@ html[lang="zh-CN"] .logo {
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--gold);
+  background: var(--accent);
   transition: width var(--transition);
 }
 
 .nav-links a:hover {
-  color: var(--charcoal);
+  color: var(--text);
 }
 
 .nav-links a:hover::after {
@@ -191,7 +193,7 @@ html[lang="zh-CN"] .logo {
   display: block;
   width: 24px;
   height: 1px;
-  background: var(--charcoal);
+  background: var(--text);
   transition: transform var(--transition), opacity var(--transition);
 }
 
@@ -238,9 +240,9 @@ html[lang="zh-CN"] .logo {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 70% 20%, rgba(232, 213, 208, 0.45) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 80%, rgba(184, 149, 107, 0.1) 0%, transparent 50%),
-    linear-gradient(180deg, rgba(250, 247, 242, 0.85) 0%, rgba(240, 235, 227, 0.75) 100%);
+    radial-gradient(ellipse at 70% 20%, rgba(200, 161, 80, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(200, 161, 80, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(15, 15, 15, 0.88) 0%, rgba(15, 15, 15, 0.82) 100%);
 }
 
 .hero-grid-overlay {
@@ -249,8 +251,8 @@ html[lang="zh-CN"] .logo {
   z-index: 1;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(184, 149, 107, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(184, 149, 107, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(200, 161, 80, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 161, 80, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -268,7 +270,7 @@ html[lang="zh-CN"] .logo {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(184, 149, 107, 0.35);
+  background: rgba(200, 161, 80, 0.35);
   border: none;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease;
@@ -276,7 +278,7 @@ html[lang="zh-CN"] .logo {
 }
 
 .hero-dot.active {
-  background: var(--gold);
+  background: var(--accent);
   transform: scale(1.3);
 }
 
@@ -295,7 +297,7 @@ html[lang="zh-CN"] .logo {
   font-size: 0.75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent);
   margin-bottom: var(--space-md);
 }
 
@@ -310,7 +312,7 @@ html[lang="zh-CN"] .logo {
 
 .hero-sub {
   font-size: clamp(0.875rem, 2vw, 1rem);
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   max-width: 480px;
   margin: 0 auto var(--space-lg);
   line-height: 1.8;
@@ -330,25 +332,26 @@ html[lang="zh-CN"] .logo {
 }
 
 .btn-primary {
-  background: var(--charcoal);
-  color: var(--cream);
-  border-color: var(--charcoal);
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
 }
 
 .btn-primary:hover {
   background: transparent;
-  color: var(--charcoal);
+  color: var(--accent);
 }
 
 .btn-outline {
   background: transparent;
-  color: var(--charcoal);
-  border-color: var(--charcoal);
+  color: var(--text);
+  border-color: rgba(240, 234, 216, 0.4);
 }
 
 .btn-outline:hover {
-  background: var(--charcoal);
-  color: var(--cream);
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
 }
 
 /* Hero quick nav pills */
@@ -367,9 +370,9 @@ html[lang="zh-CN"] .logo {
   font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.04em;
-  color: var(--charcoal);
+  color: var(--text-muted);
   background: transparent;
-  border: 1px solid rgba(0,0,0,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   text-decoration: none;
   transition: all var(--transition);
@@ -377,9 +380,9 @@ html[lang="zh-CN"] .logo {
 }
 
 .hero-nav-pill:hover {
-  background: var(--charcoal);
-  color: var(--cream);
-  border-color: var(--charcoal);
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
 }
 
 .hero-scroll {
@@ -397,13 +400,13 @@ html[lang="zh-CN"] .logo {
   font-size: 0.625rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--charcoal-light);
+  color: var(--text-muted);
 }
 
 .scroll-line {
   width: 1px;
   height: 40px;
-  background: linear-gradient(to bottom, var(--gold), transparent);
+  background: linear-gradient(to bottom, var(--accent), transparent);
   animation: scrollPulse 2s ease-in-out infinite;
 }
 
@@ -419,14 +422,14 @@ html[lang="zh-CN"] .logo {
 }
 
 .section-alt {
-  background: var(--cream-dark);
+  background: var(--bg-alt);
 }
 
 .section-label {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent);
   margin-bottom: var(--space-sm);
 }
 
@@ -444,7 +447,7 @@ html[lang="zh-CN"] .logo {
 
 .section-sub {
   margin-top: var(--space-sm);
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   font-style: italic;
   font-family: var(--font-display);
   font-size: 1.125rem;
@@ -468,16 +471,16 @@ html[lang="zh-CN"] .logo {
 }
 
 .intro-text p {
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   margin-bottom: var(--space-sm);
 }
 
 .intro-jp {
   font-size: 0.875rem;
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   opacity: 0.85;
   padding-left: var(--space-sm);
-  border-left: 2px solid var(--blush);
+  border-left: 2px solid var(--accent);
 }
 
 .intro-features {
@@ -491,22 +494,22 @@ html[lang="zh-CN"] .logo {
   align-items: baseline;
   gap: var(--space-md);
   padding: var(--space-md) var(--space-lg);
-  background: var(--white);
-  border-left: 3px solid var(--gold);
+  background: var(--bg-card);
+  border-left: 3px solid var(--accent);
 }
 
 .feature-num {
   font-family: var(--font-display);
   font-size: 2.5rem;
   font-weight: 400;
-  color: var(--gold);
+  color: var(--accent);
   line-height: 1;
 }
 
 .feature-label {
   font-size: 0.8125rem;
   letter-spacing: 0.06em;
-  color: var(--charcoal-light);
+  color: var(--text-muted);
 }
 
 .intro-promo-image {
@@ -531,13 +534,13 @@ html[lang="zh-CN"] .logo {
 
 .env-carousel-section {
   padding: var(--space-2xl) 0;
-  background: var(--cream-dark);
+  background: var(--bg-alt);
 }
 
 .env-carousel {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(184, 149, 107, 0.12);
+  border: 1px solid var(--border);
 }
 
 .env-carousel-track {
@@ -569,9 +572,9 @@ html[lang="zh-CN"] .logo {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(184, 149, 107, 0.3);
-  background: var(--white);
-  color: var(--charcoal);
+  border: 1px solid rgba(200, 161, 80, 0.3);
+  background: var(--bg-card);
+  color: var(--text);
   font-size: 1rem;
   cursor: pointer;
   display: flex;
@@ -581,9 +584,9 @@ html[lang="zh-CN"] .logo {
 }
 
 .env-carousel-btn:hover {
-  background: var(--gold);
-  color: var(--white);
-  border-color: var(--gold);
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
 }
 
 .env-dots {
@@ -595,7 +598,7 @@ html[lang="zh-CN"] .logo {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(184, 149, 107, 0.3);
+  background: rgba(200, 161, 80, 0.3);
   border: none;
   cursor: pointer;
   padding: 0;
@@ -603,7 +606,7 @@ html[lang="zh-CN"] .logo {
 }
 
 .env-dot.active {
-  background: var(--gold);
+  background: var(--accent);
   transform: scale(1.3);
 }
 
@@ -623,28 +626,28 @@ html[lang="zh-CN"] .logo {
 
 .service-card {
   position: relative;
-  background: var(--white);
+  background: var(--bg-card);
   padding: var(--space-lg);
-  border: 1px solid rgba(184, 149, 107, 0.12);
+  border: 1px solid var(--border);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(44, 44, 44, 0.06);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .service-card.featured {
-  border-color: var(--gold);
-  background: linear-gradient(135deg, var(--white) 0%, rgba(232, 213, 208, 0.15) 100%);
+  border-color: var(--accent);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(200, 161, 80, 0.08) 100%);
 }
 
 .badge {
   position: absolute;
   top: -0.625rem;
   left: var(--space-md);
-  background: var(--gold);
-  color: var(--white);
+  background: var(--accent);
+  color: var(--bg);
   font-size: 0.625rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -654,7 +657,7 @@ html[lang="zh-CN"] .logo {
 .service-card-header {
   margin-bottom: var(--space-sm);
   padding-bottom: var(--space-sm);
-  border-bottom: 1px solid rgba(184, 149, 107, 0.15);
+  border-bottom: 1px solid var(--border);
 }
 
 .service-card-header h3 {
@@ -667,14 +670,14 @@ html[lang="zh-CN"] .logo {
 .price {
   font-family: var(--font-display);
   font-size: 1.25rem;
-  color: var(--gold);
+  color: var(--accent);
   letter-spacing: 0.02em;
 }
 
 .price-sub {
   font-family: var(--font-display);
   font-size: 0.9375rem;
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   margin-top: 0.125rem;
 }
 
@@ -684,7 +687,7 @@ html[lang="zh-CN"] .logo {
 
 .service-desc {
   font-size: 0.875rem;
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   margin-bottom: var(--space-md);
   line-height: 1.65;
 }
@@ -697,7 +700,7 @@ html[lang="zh-CN"] .logo {
 
 .includes li {
   font-size: 0.8125rem;
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   padding-left: 1.25rem;
   position: relative;
 }
@@ -706,17 +709,17 @@ html[lang="zh-CN"] .logo {
   content: "—";
   position: absolute;
   left: 0;
-  color: var(--blush-deep);
+  color: var(--accent);
 }
 
 .includes li.gift {
-  color: var(--gold);
+  color: var(--accent);
   font-weight: 400;
 }
 
 .includes li.gift::before {
   content: "★";
-  color: var(--gold);
+  color: var(--accent);
 }
 
 .includes-inline {
@@ -735,7 +738,7 @@ html[lang="zh-CN"] .logo {
   font-weight: 400;
   text-align: center;
   margin-bottom: var(--space-md);
-  color: var(--charcoal-light);
+  color: var(--text-muted);
 }
 
 .service-card-wide {
@@ -743,15 +746,48 @@ html[lang="zh-CN"] .logo {
   margin-inline: auto;
 }
 
+/* ---- Concept cards ---- */
+
+.concept-card {
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.concept-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent);
+}
+
+.concept-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.concept-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.concept-card p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
 /* ---- Visit ---- */
 
 .visit {
-  background: var(--charcoal);
-  color: var(--cream);
+  background: var(--bg-alt);
 }
 
 .visit .section-label {
-  color: var(--gold-light);
+  color: var(--accent-light);
 }
 
 .visit h2 {
@@ -784,14 +820,14 @@ html[lang="zh-CN"] .logo {
   font-size: 0.6875rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--gold-light);
+  color: var(--accent-light);
   margin-bottom: 0.5rem;
 }
 
 .visit-item p {
   font-size: 0.9375rem;
   line-height: 1.7;
-  color: rgba(250, 247, 242, 0.85);
+  color: var(--text);
 }
 
 .visit-en {
@@ -801,24 +837,24 @@ html[lang="zh-CN"] .logo {
 }
 
 .visit-item a {
-  color: var(--cream);
-  border-bottom: 1px solid rgba(250, 247, 242, 0.3);
+  color: var(--text);
+  border-bottom: 1px solid rgba(240, 234, 216, 0.3);
 }
 
 .visit-item a:hover {
-  color: var(--gold-light);
-  border-color: var(--gold-light);
+  color: var(--accent-light);
+  border-color: var(--accent-light);
 }
 
 .visit .btn-outline {
-  color: var(--cream);
-  border-color: rgba(250, 247, 242, 0.4);
+  color: var(--text);
+  border-color: rgba(240, 234, 216, 0.4);
 }
 
 .visit .btn-outline:hover {
-  background: var(--cream);
-  color: var(--charcoal);
-  border-color: var(--cream);
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
 }
 
 .visit-map {
@@ -826,21 +862,21 @@ html[lang="zh-CN"] .logo {
   min-height: 320px;
   max-width: 100%;
   overflow: hidden;
-  background: rgba(250, 247, 242, 0.05);
-  border: 1px solid rgba(250, 247, 242, 0.1);
+  background: rgba(240, 234, 216, 0.02);
+  border: 1px solid rgba(240, 234, 216, 0.1);
 }
 
 .visit-map iframe {
   width: 100%;
   height: 100%;
-  filter: grayscale(30%) contrast(1.05);
+  filter: grayscale(50%) invert(0.95) contrast(1.05);
 }
 
 /* ---- Footer ---- */
 
 .footer {
   padding: var(--space-lg) 0;
-  background: #1a1a1a;
+  background: #0a0a0a;
   text-align: center;
 }
 
@@ -852,7 +888,7 @@ html[lang="zh-CN"] .logo {
 }
 
 .footer .logo {
-  color: var(--cream);
+  color: var(--text);
   font-size: 1.5rem;
 }
 
@@ -860,29 +896,29 @@ html[lang="zh-CN"] .logo {
   font-family: var(--font-display);
   font-style: italic;
   font-size: 0.9375rem;
-  color: rgba(250, 247, 242, 0.5);
+  color: rgba(240, 234, 216, 0.4);
 }
 
 .footer-copy {
   font-size: 0.75rem;
-  color: rgba(250, 247, 242, 0.3);
+  color: rgba(240, 234, 216, 0.25);
   margin-top: var(--space-sm);
 }
 
 .footer-powered {
   font-size: 0.7rem;
-  color: rgba(250, 247, 242, 0.2);
+  color: rgba(240, 234, 216, 0.15);
   margin-top: 0.25rem;
 }
 
 .footer-powered a {
-  color: rgba(250, 247, 242, 0.35);
+  color: rgba(240, 234, 216, 0.3);
   text-decoration: underline;
   transition: color 0.3s;
 }
 
 .footer-powered a:hover {
-  color: rgba(250, 247, 242, 0.6);
+  color: rgba(240, 234, 216, 0.5);
 }
 
 /* ---- Responsive ---- */
@@ -944,14 +980,14 @@ html[lang="zh-CN"] .logo {
     left: 0;
     right: 0;
     flex-direction: column;
-    background: rgba(250, 247, 242, 0.98);
+    background: rgba(15, 15, 15, 0.98);
     backdrop-filter: blur(12px);
     padding: var(--space-lg) 0;
     gap: var(--space-md);
     transform: translateY(-120%);
     opacity: 0;
     transition: transform var(--transition), opacity var(--transition);
-    border-bottom: 1px solid rgba(184, 149, 107, 0.15);
+    border-bottom: 1px solid var(--border);
   }
 
   .nav-menu.open {
@@ -970,7 +1006,7 @@ html[lang="zh-CN"] .logo {
     justify-content: center;
     gap: 0.5rem;
     padding-top: var(--space-sm);
-    border-top: 1px solid rgba(184,149,107,0.1);
+    border-top: 1px solid var(--border);
     margin-top: 0.25rem;
   }
 
@@ -991,13 +1027,6 @@ html[lang="zh-CN"] .logo {
   .env-carousel-btn {
     width: 34px;
     height: 34px;
-  }
-
-  .whatsapp-btn {
-    bottom: 6.5rem;
-    right: 1rem;
-    width: 46px;
-    height: 46px;
   }
 
   .back-to-top {
@@ -1021,15 +1050,27 @@ html[lang="zh-CN"] .logo {
   align-items: flex-start;
   justify-content: center;
   padding: 36px 20px 40px;
-  background: var(--cream);
+  background: var(--bg);
 }
 
 .lang-landing-bg {
   position: absolute;
   inset: 0;
-  background: url(assets/images/interior-salon-01.jpg) center/cover no-repeat;
-  opacity: 0.04;
+  background: url(assets/images/interior-dining.jpg) center/cover no-repeat;
+  opacity: 0.06;
   z-index: 0;
+}
+
+/* Logo */
+.lang-logo {
+  animation: langFadeInUp 0.8s ease-out 0.1s both;
+}
+
+.lang-logo-img {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .lang-landing-content {
@@ -1059,13 +1100,13 @@ html[lang="zh-CN"] .logo {
 .lang-brand-badge {
   display: inline-flex;
   align-items: center;
-  background: rgba(184, 149, 107, 0.1);
-  border: 1px solid rgba(184, 149, 107, 0.2);
+  background: rgba(200, 161, 80, 0.1);
+  border: 1px solid rgba(200, 161, 80, 0.2);
   border-radius: 50px;
   padding: 8px 20px;
   margin-bottom: 1.5rem;
   font-size: 0.75rem;
-  color: var(--gold);
+  color: var(--accent);
   font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -1076,7 +1117,7 @@ html[lang="zh-CN"] .logo {
   font-size: clamp(2.25rem, 5.5vw, 3.25rem);
   font-weight: 400;
   letter-spacing: 0.12em;
-  color: var(--charcoal);
+  color: var(--text);
   margin-bottom: 0.35rem;
   line-height: 1.15;
 }
@@ -1086,7 +1127,7 @@ html[lang="zh-CN"] .logo {
   font-style: italic;
   font-size: clamp(0.875rem, 2vw, 1.0625rem);
   font-weight: 400;
-  color: var(--gold);
+  color: var(--accent);
   letter-spacing: 0.5px;
   margin-bottom: 0.35rem;
 }
@@ -1094,7 +1135,7 @@ html[lang="zh-CN"] .logo {
 .lang-brand-sub {
   font-size: clamp(0.8125rem, 1.5vw, 0.9375rem);
   font-weight: 300;
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   line-height: 1.5;
   max-width: 520px;
   margin-left: auto;
@@ -1112,12 +1153,12 @@ html[lang="zh-CN"] .logo {
 }
 
 .lang-card {
-  background: var(--white);
-  border: 1px solid rgba(184, 149, 107, 0.15);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 0.65rem 1rem;
   text-decoration: none;
-  color: var(--charcoal);
+  color: var(--text);
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -1125,13 +1166,13 @@ html[lang="zh-CN"] .logo {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .lang-card:hover {
   transform: translateY(-3px);
-  border-color: var(--gold);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .lang-card:active {
@@ -1142,7 +1183,7 @@ html[lang="zh-CN"] .logo {
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.3px;
-  color: var(--charcoal);
+  color: var(--text);
   width: 5.5em;
   flex-shrink: 0;
   text-align: center;
@@ -1151,7 +1192,7 @@ html[lang="zh-CN"] .logo {
 .lang-card-desc {
   font-size: 0.8rem;
   font-weight: 400;
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   width: 11em;
   flex-shrink: 0;
   white-space: nowrap;
@@ -1169,7 +1210,7 @@ html[lang="zh-CN"] .logo {
   animation: langFadeInUp 0.8s ease-out 0.6s both;
 }
 
-.lang-btn-whatsapp,
+.lang-btn-reserve,
 .lang-btn-phone {
   display: inline-flex;
   align-items: center;
@@ -1187,35 +1228,29 @@ html[lang="zh-CN"] .logo {
   max-width: 380px;
 }
 
-.lang-btn-whatsapp {
-  background: #1E8E4F;
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(30,142,79,0.25);
+.lang-btn-reserve {
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 2px 8px rgba(200, 161, 80, 0.25);
 }
 
-.lang-btn-whatsapp:hover {
+.lang-btn-reserve:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(30,142,79,0.35);
-  background: #20A05A;
-}
-
-.lang-whatsapp-icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(200, 161, 80, 0.4);
+  background: #d4b060;
 }
 
 .lang-btn-phone {
-  background: var(--charcoal);
-  color: var(--cream);
-  box-shadow: 0 2px 8px rgba(44,44,44,0.25);
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .lang-btn-phone:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(44,44,44,0.35);
-  background: #3a3a3a;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent);
 }
 
 .lang-phone-icon {
@@ -1232,18 +1267,18 @@ html[lang="zh-CN"] .logo {
 }
 
 .lang-store-card {
-  background: var(--white);
-  border: 1px solid rgba(184, 149, 107, 0.15);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.25rem 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 .lang-store-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  border-color: var(--gold);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent);
 }
 
 .lang-store-image {
@@ -1277,7 +1312,7 @@ html[lang="zh-CN"] .logo {
 .lang-store-label {
   font-size: 0.65rem;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--accent);
   letter-spacing: 1.2px;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -1285,26 +1320,26 @@ html[lang="zh-CN"] .logo {
 
 .lang-store-text {
   font-size: 0.875rem;
-  color: var(--charcoal);
+  color: var(--text);
   font-weight: 400;
   line-height: 1.5;
 }
 
 .lang-store-hours {
   font-size: 0.8rem;
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   font-weight: 400;
   letter-spacing: 0.3px;
 }
 
 .lang-store-text a {
-  color: var(--charcoal);
+  color: var(--text);
   text-decoration: underline;
   transition: color 0.3s;
 }
 
 .lang-store-text a:hover {
-  color: var(--gold);
+  color: var(--accent);
 }
 
 /* Footer */
@@ -1318,31 +1353,31 @@ html[lang="zh-CN"] .logo {
 
 .lang-footer-text {
   font-size: 0.7rem;
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   font-weight: 300;
   letter-spacing: 0.5px;
 }
 
 .lang-footer-powered {
   font-size: 0.65rem;
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   opacity: 0.5;
   margin-top: 0.25rem;
 }
 
 .lang-footer-powered a {
-  color: var(--charcoal-light);
+  color: var(--text-muted);
   text-decoration: underline;
   transition: color 0.3s;
 }
 
 .lang-footer-powered a:hover {
-  color: var(--gold);
+  color: var(--accent);
 }
 
-/* ---- Booking Button (Service Cards) ---- */
+/* ---- Reserve Button (Service Cards) ---- */
 
-.btn-booking {
+.btn-reserve {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1350,8 +1385,8 @@ html[lang="zh-CN"] .logo {
   width: 100%;
   padding: 12px 20px;
   margin-top: var(--space-md);
-  background: #1E8E4F;
-  color: #fff;
+  background: var(--accent);
+  color: var(--bg);
   border: none;
   border-radius: 50px;
   font-family: var(--font-body);
@@ -1361,20 +1396,13 @@ html[lang="zh-CN"] .logo {
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(30,142,79,0.2);
+  box-shadow: 0 2px 8px rgba(200, 161, 80, 0.2);
 }
 
-.btn-booking:hover {
-  background: #20A05A;
+.btn-reserve:hover {
+  background: #d4b060;
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(30,142,79,0.3);
-}
-
-.btn-booking svg {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(200, 161, 80, 0.3);
 }
 
 /* ---- Language Landing Responsive ---- */
@@ -1402,7 +1430,7 @@ html[lang="zh-CN"] .logo {
     padding: 1rem 1.25rem;
   }
 
-  .lang-btn-whatsapp,
+  .lang-btn-reserve,
   .lang-btn-phone {
     max-width: 100%;
   }
@@ -1448,7 +1476,7 @@ html[lang="zh-CN"] .logo {
     font-size: 0.7rem;
   }
 
-  .lang-btn-whatsapp,
+  .lang-btn-reserve,
   .lang-btn-phone {
     padding: 14px 28px;
     font-size: 0.95rem;
@@ -1463,51 +1491,18 @@ html[lang="zh-CN"] .logo {
 
   .lang-card:active {
     transform: scale(0.98);
-    border-color: var(--gold);
+    border-color: var(--accent);
   }
 
-  .lang-btn-whatsapp:hover,
+  .lang-btn-reserve:hover,
   .lang-btn-phone:hover {
     transform: none;
   }
 
-  .lang-btn-whatsapp:active,
+  .lang-btn-reserve:active,
   .lang-btn-phone:active {
     transform: scale(0.97);
   }
-}
-
-/* ---- WhatsApp Button ---- */
-
-.whatsapp-btn {
-  position: fixed;
-  bottom: 5.5rem;
-  right: 2rem;
-  z-index: 99;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: #25D366;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
-}
-
-.whatsapp-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
-}
-
-.whatsapp-btn svg {
-  width: 26px;
-  height: 26px;
-  fill: currentColor;
 }
 
 /* ---- Back to Top ---- */
@@ -1520,9 +1515,9 @@ html[lang="zh-CN"] .logo {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--charcoal);
-  color: var(--cream);
-  border: 1px solid rgba(250, 247, 242, 0.2);
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
   font-size: 1.125rem;
   cursor: pointer;
   display: flex;
@@ -1541,6 +1536,5 @@ html[lang="zh-CN"] .logo {
 }
 
 .back-to-top:hover {
-  background: var(--gold);
-  border-color: var(--gold);
+  background: #d4b060;
 }
